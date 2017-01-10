@@ -8,14 +8,17 @@ var bodyParser = require('body-parser');
 var server = require('http').createServer(app);
 
 // 路由模块
+var ADMIN = require('./routes/admin');
 var INDEX = require('./routes/index');
+var RULES = require('./routes/rules');
+var VOTE = require('./routes/vote');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(favicon(__dirname + '/public/favicon/beer.ico')); // 网站ico
-app.use(logger('dev'));
+// app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -23,8 +26,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // 路由规则
+app.get('/admin/login', ADMIN.Init);
 app.get('/', INDEX.Init);
 app.get('/index', INDEX.Init);
+app.get('/rules', RULES.Init);
+app.get('/vote', VOTE.Init);
 
 
 server.listen(4800, function () {

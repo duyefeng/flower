@@ -1,0 +1,12 @@
+.search {
+    height: 400px;
+}
+.list {
+    margin-top: 200px;
+    height: 600px;
+}
+li {
+    width: 260px;
+    height: 400px;
+    background: #eaeff9;
+}

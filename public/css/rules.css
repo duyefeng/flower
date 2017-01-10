@@ -1,0 +1,30 @@
+.container .banner {
+    box-shadow: 2px 10px 16px #333;
+    width: 100%;
+    height: 422px;
+    position: relative;
+    background-image: url('/images/banner.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-left: 210px;
+    padding-top: 100px;
+    color: rgba(255,255,255,0.9);
+    line-height: 30px;
+}
+.go-vote {
+    margin-left: 10px;
+    color: rgba(255,255,255,0.8);
+    text-decoration: underline;
+}
+.go-vote:hover {
+    color: #cf9237;
+}
+.container .banner .headline {
+    position: absolute;
+    font-size: 24px;
+    font-family: 'microsoft yahei';
+    color: #fff;
+    top: 46px;
+    left: 512px;
+    letter-spacing: 4px;
+}

@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title><%= title %></title>
-        <link rel='stylesheet' href='/css/base.css'/>
-        <link rel='stylesheet' href='/css/index.css'/>
-        <script type="text/javascript" src='/js/jquery-2.2.3.min.js'></script>
-        <script type="text/javascript" src='/js/index.js'></script>
-    </head>
+    <% include head.ejs %>
+    <script type="text/javascript" src='/js/index.js'></script>
+    <link rel='stylesheet' href='/css/index.css'/>
     <body>
-        <a class='left'></a>
-        <a class='right'></a>
+        <a class='left-btn'>上一页</a>
+        <a class='right-btn'>下一页</a>
         <div class='container'>
             <div class='box box1' data-move='0'>
                 投票页
@@ -23,10 +19,31 @@
                 金榜题名
                 <div class='mask'></div>
             </div>
-        </div>
-        <div class='show'>
-
-        </div>
+            <div class='show vote'>
+                <h2 class='title'>投票主页</h2>
+                <div class='intro'>
+                    <p>请给他(她)献上一朵小红花吧,但落花虽有意,流水却无情。不知君是否能明白我心</p>
+                    <img src="images/kawaii3.jpg" width="180" />
+                </div>
+                <a class='entry' target="_blank" href='/vote'>进入页面</a>
+            </div>
+            <div class='show rules'>
+                <h2 class='title'>活动规则</h2>
+                <div class='intro'>
+                    <p>每人每月只有1次投票机会噢</p>
+                    <img src='images/kawaii.jpg' width="200" />
+                </div>
+                <a class='entry' target="_blank" href='/rules'>进入页面</a>
+            </div>
+            <div class='show rank'>
+                <h2 class='title'>琅琊榜</h2>
+                <div class='intro'>
+                   <p>哇，那个人好像很有魅力噢~</p>
+                   <img src="images/kawaii2.jpg" width="200" />
+                </div>
+                <a class='entry' target="_blank" href='/rank'>进入页面</a>
+            </div>
+        </div>  
         <% include footer.ejs %>
     </body>
 </html>
